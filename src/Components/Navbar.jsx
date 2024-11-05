@@ -68,7 +68,7 @@ let nevigate= useNavigate()
             </div>
             
             <div className="right">
-            <FaCartShopping />
+            <FaCartShopping  />
             </div>
          </div>
 

@@ -6,6 +6,9 @@ import { IoCaretDownOutline, IoClose } from 'react-icons/io5'
 import Li from './Layer/Li'
 import Container from './Layer/Container'
 import Button from './Layer/Button'
+import { useNavigate } from 'react-router-dom'
+
+
 
 
 
@@ -46,7 +49,9 @@ const SearchBar = () => {
             let searchData = product.filter((item) => item.title.toLowerCase().includes(search.toLowerCase()))
             setFilterData(searchData);
         }
-      },[search,product])
+      },[search,product]);
+
+      let nevigate= useNavigate()
 
  
 
@@ -302,7 +307,7 @@ const SearchBar = () => {
            {
             account&&(
                 <div className="account absolute flex flex-col bg w-[200px] h-[100px] right-[58px] top-full z-10">
-                <Button   className='!w-full bg-black text-white' ButtonText='My Account'/>
+                <Button   className='!w-full bg-black text-white' ButtonText='My Account' onClick={()=> nevigate ('/curt/')}/>
                 <Button   className='!w-full  bg-white text-black hover:bg-white hover:!text-black ' ButtonText='Log Out'/>
 
             </div>
