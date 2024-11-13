@@ -22,7 +22,7 @@ import SignUp from './Components/Page/SignUp';
 import LogIn from './Components/Page/LogIn';
 import ProductDetails from './Components/Page/ProductDetails';
 import ListStyle from './Components/Page/ListStyle';
-import Curt from './Components/Page/Curt';
+import Cart from './Components/Page/Cart';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,7 +36,7 @@ const router = createBrowserRouter(
       <Route path='/login/' element={<LogIn/>}/>
       <Route path='/product/details' element={<ProductDetails/>}/>
       <Route path='/test' element={<ListStyle/>}/>
-      <Route path='/curt/' element={<Curt/>}/>
+      <Route path='/cart/' element={<Cart/>}/>
 
 
 

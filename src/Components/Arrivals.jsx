@@ -33,7 +33,7 @@ function SampleNextArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-      className='absolute w-16 h-16 right-5 top-[40%] -translate-y-[40%] rounded-full items-center justify-center bg-[#979797] '
+      className='absolute w-16 h-16 right-0 top-[40%] -translate-y-[40%] rounded-full items-center justify-center bg-[#979797] '
       style={{ ...style, display: "flex", background: "" }}
       onClick={onClick}
     >
@@ -47,7 +47,7 @@ function SamplePrevArrow(props) {
   const {  style, onClick } = props;
   return (
     <div
-     className='absolute w-16 h-16 left-5 top-[40%] -translate-y-[40%] rounded-full items-center justify-center bg-[#979797] z-10 '
+     className='absolute w-16 h-16 left-0 top-[40%] -translate-y-[40%] rounded-full items-center justify-center bg-[#979797] z-10 '
       style={{ ...style,display: "flex",background: "" }}
       onClick={onClick}
     >
