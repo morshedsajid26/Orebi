@@ -55,7 +55,7 @@ let nevigate= useNavigate()
             <ul className={` transition-all duration-500 flex md:flex-row flex-col gap-x-10  -z-0 md:bg-transparent  bg-slate-300 absolute md:static top-full left-0 md:w-auto w-full p-4 md:p-0 ${show?"translate-y-0":"-translate-y-[200%]"}`}>
           <Li className=' text-primary text-[14px] ' liText='Home'/>
           <Li liText='Shop' href="/products/" />
-          <Li liText='About' href="/about" />
+          <Li liText='About' href="/about/" />
           <Li liText='Contacts' href="/contacts"  />
           <Li liText='Journal' href="/journal"/>
           
