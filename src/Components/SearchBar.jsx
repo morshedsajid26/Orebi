@@ -51,7 +51,7 @@ const SearchBar = () => {
         }
       },[search,product]);
 
-      let nevigate= useNavigate()
+      const navigate= useNavigate()
 
  
 
@@ -307,7 +307,7 @@ const SearchBar = () => {
            {
             account&&(
                 <div className="account absolute flex flex-col bg w-[200px] h-[100px] right-[58px] top-full z-10">
-                <Button   className='!w-full bg-black text-white' ButtonText='My Account' onClick={()=> nevigate ('/curt/')}/>
+                <Button   className='!w-full bg-black text-white' ButtonText='My Account' onClick={()=> navigate ('/cart/')}/>
                 <Button   className='!w-full  bg-white text-black hover:bg-white hover:!text-black ' ButtonText='Log Out'/>
 
             </div>
