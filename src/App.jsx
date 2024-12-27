@@ -30,8 +30,8 @@ const router = createBrowserRouter(
       <Route index element={<Home/>}/>
       <Route path='/products/' element={<Shop/>}/>
       <Route path='/about/' element={<About/>}/>
-      <Route path='/contacts' element={<Contacts/>}/>
-      <Route path='/journal' element={<Journal/>}/>
+      <Route path='/contacts/' element={<Contacts/>}/>
+      <Route path='/journal/' element={<Journal/>}/>
       <Route path='/sign/up' element={<SignUp/>}/>
       <Route path='/login/' element={<LogIn/>}/>
       <Route path='/product/details' element={<ProductDetails/>}/>

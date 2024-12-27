@@ -56,8 +56,8 @@ let nevigate= useNavigate()
           <Li  liText='Home' href='/'/>
           <Li liText='Shop' href="/products/" />
           <Li liText='About' href="/about/" />
-          <Li liText='Contacts' href="/contacts"  />
-          <Li liText='Journal' href="/journal"/>
+          <Li liText='Contacts' href="/contacts/"  />
+          <Li liText='Journal' href="/journal/"/>
           
         </ul>
           

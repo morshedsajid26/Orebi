@@ -66,7 +66,7 @@ const SearchBar = () => {
                 {
                     show &&(
                         <ul className='catddm absolute left-0 top-full bg-slate-200 w-[263px] z-10'>
-                    <Li className="font-DM w-full block bg-[#262626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Accesories">
+                    <Li className="font-DM w-full block bg-[#22626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Accesories">
                             {/* <div className='absolute hidden group-hover:flex gap-10 left-full top-0 bg-gray-300 p-10 h-full'>
                                 <ul className='flex flex-col gap-3'>
                                     <h2 className='mb-2'>Bangladesh</h2>
@@ -93,7 +93,7 @@ const SearchBar = () => {
 
 
                     </Li>
-                    <Li className="font-DM w-full block bg-[#262626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Furniture">
+                    <Li className="font-DM w-full block bg-[#62626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Furniture">
                         {/* <div className='absolute hidden group-hover:flex gap-10 left-full top-0 bg-gray-300 p-10 h-full'>
                             <ul className='flex flex-col gap-3'>
                                 <h2 className='mb-2'>Bangladesh</h2>
@@ -120,7 +120,7 @@ const SearchBar = () => {
 
 
                     </Li>
-                    <Li className="font-DM w-full block bg-[#262626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Electronics ">
+                    <Li className="font-DM w-full block bg-[#62626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Electronics ">
                     
                         <div className=' static md:absolute hidden group-hover:flex flex-wrap md:flex-nowrap gap-10 left-full top-0 bg-gray-300 py-6 px-10 h-full'>
 
@@ -169,7 +169,7 @@ const SearchBar = () => {
 
 
                     </Li>
-                    <Li className="font-DM w-full block bg-[#262626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Clothes">
+                    <Li className="font-DM w-full block bg-[#62626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Clothes">
                         {/* <div className='absolute hidden group-hover:flex gap-10 left-full top-0 bg-gray-300 p-10 h-full'>
                             <ul className='flex flex-col gap-3'>
                                 <h2 className='mb-2'>Bangladesh</h2>
@@ -196,7 +196,7 @@ const SearchBar = () => {
 
 
                     </Li>
-                    <Li className="font-DM w-full block bg-[#262626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Bags">
+                    <Li className="font-DM w-full block bg-[#62626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Bags">
                         {/* <div className='absolute hidden group-hover:flex gap-10 left-full top-0 bg-gray-300 p-10 h-full'>
                             <ul className='flex flex-col gap-3'>
                                 <h2 className='mb-2'>Bangladesh</h2>
@@ -223,7 +223,7 @@ const SearchBar = () => {
 
 
                     </Li>
-                    <Li className="font-DM w-full block bg-[#262626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Home Appliances">
+                    <Li className="font-DM w-full block bg-[#62626] text-white/70 py-4 px-5 hover:text-white hover:pl-[31px] border-b  border-[#2D2D2D]" liText="Home Appliances">
                         {/* <div className='absolute hidden group-hover:flex gap-10 left-full top-0 bg-gray-300 p-10 h-full'>
                             <ul className='flex flex-col gap-3'>
                                 <h2 className='mb-2'>Bangladesh</h2>
