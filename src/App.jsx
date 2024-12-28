@@ -23,6 +23,7 @@ import LogIn from './Components/Page/LogIn';
 import ProductDetails from './Components/Page/ProductDetails';
 import ListStyle from './Components/Page/ListStyle';
 import Cart from './Components/Page/Cart';
+import Error from './Components/Page/Error';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
       <Route path='/product/details' element={<ProductDetails/>}/>
       <Route path='/test' element={<ListStyle/>}/>
       <Route path='/cart/' element={<Cart/>}/>
+      <Route path='/error' element={<Error/>}/>
 
 
 
