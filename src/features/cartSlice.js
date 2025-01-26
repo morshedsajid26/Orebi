@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 import Paginate from '../Components/Layer/Paginate'
+import Shop from '../Components/Page/Shop'
 
 const initialState = {
     addToCart: [],
-    allProduct: Paginate,
+    allProduct: Shop,
     totalPrice: 0,
     totalQuantity:0,
 }
