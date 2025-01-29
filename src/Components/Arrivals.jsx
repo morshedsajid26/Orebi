@@ -1,63 +1,49 @@
-import React, { useEffect, useState } from 'react'
-import Container from './Layer/Container'
-import TitleHeader from './Layer/TitleHeader'
-import ProductCard from './Layer/ProductCard'
-
-import product1 from '/Product/product 1.png'
-import product2 from '/Product/product 2.png'
-import product3 from '/Product/product 3.png'
-import product4 from '/Product/product 4.png'
-import Slider from 'react-slick'
-
-import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa'
-
-import axios from 'axios'
+import React, { useEffect, useState } from 'react';
+import Container from './Layer/Container';
+import TitleHeader from './Layer/TitleHeader';
+import ProductCard from './Layer/ProductCard';
+import Slider from 'react-slick';
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from 'react-icons/fa';
+import axios from 'axios';
 
 const Arrivals = () => {
   const [items, setItems] = useState([]);
 
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get('https://dummyjson.com/products');
+        setItems(response.data.products);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    getData();
+  }, []);
 
-  useEffect(()=>{
-    const getData = async ()=>{
-      
-      const response = await axios.get('https://dummyjson.com/products')
-      // const data = await response.json()
-      
-      setItems(response.data.products );
-    }
-    getData()
-  },[])
-
-  
-function SampleNextArrow(props) {
-  const {  style, onClick } = props;
-  return (
-    <div
-      className='absolute w-16 h-16 right-0 top-[40%] -translate-y-[40%] rounded-full items-center justify-center bg-[#979797] '
-      style={{ ...style, display: "flex", background: "" }}
-      onClick={onClick}
-    >
-      <div><FaLongArrowAltRight className='text-white' />
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className='absolute w-12 h-12 sm:w-16 sm:h-16 right-2 sm:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center bg-[#979797] rounded-full cursor-pointer hover:bg-[#767676] transition-all duration-300'
+        onClick={onClick}
+      >
+        <FaLongArrowAltRight className='text-white text-lg sm:text-xl' />
       </div>
-    </div>
-  );
-}
+    );
+  }
 
-function SamplePrevArrow(props) {
-  const {  style, onClick } = props;
-  return (
-    <div
-     className='absolute w-16 h-16 left-0 top-[40%] -translate-y-[40%] rounded-full items-center justify-center bg-[#979797] z-10 '
-      style={{ ...style,display: "flex",background: "" }}
-      onClick={onClick}
-    >
-       <div><FaLongArrowAltLeft className='text-white' />
-       </div>
-    </div>
-  );
-}
-
-
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className='absolute w-12 h-12 sm:w-16 sm:h-16 left-2 sm:left-0 top-1/2 -translate-y-1/2 flex items-center justify-center bg-[#979797] rounded-full cursor-pointer hover:bg-[#767676] transition-all duration-300 z-10'
+        onClick={onClick}
+      >
+        <FaLongArrowAltLeft className='text-white text-lg sm:text-xl' />
+      </div>
+    );
+  }
 
   var settings = {
     dots: false,
@@ -66,46 +52,36 @@ function SamplePrevArrow(props) {
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 3 } }, // Laptops
+      { breakpoint: 1024, settings: { slidesToShow: 2 } }, // Tablets
+      { breakpoint: 640, settings: { slidesToShow: 1 } }   // Mobile Phones
+    ]
   };
+
   return (
-    <div className=''>
-        <Container className=''>
-           <TitleHeader headerText='New Arrivals'/>
+    <div>
+      <Container>
+        <TitleHeader headerText='New Arrivals' />
+      </Container>
 
-           
-        </Container>
-
-       
-
-
-        <Container className='max-w-[1640px] mt-12'>
-        
+      <Container className='max-w-[1640px] mt-12'>
         <Slider {...settings}>
-      
-       
-
-
-                {
-                  items.map((item,i)=>(
-
-                    <ProductCard key={i} Pclass=''
-                            src={item.thumbnail} 
-                            pName={item.title} 
-                            price={item.price} 
-                            colour={item.brand} 
-                            offer={item.discountPercentage} />
-
-
-                  ))
-                  
-                }
-      
-    </Slider>
-    
-        </Container>
+          {items.map((item, i) => (
+            <ProductCard
+              key={i}
+              src={item.thumbnail}
+              pName={item.title}
+              price={item.price}
+              colour={item.brand}
+              offer={item.discountPercentage}
+            />
+          ))}
+        </Slider>
+      </Container>
     </div>
-  )
+  );
 }
 
-export default Arrivals
+export default Arrivals;
